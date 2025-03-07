@@ -1,0 +1,7 @@
+---
+const { position, positionX, positionY, rotate, image, description } = Astro.props;
+---
+
+<div class={`${position} ${positionX} ${positionY} ${rotate} w-17.5 p-5 bg-white rounded-xl shadow-[20px_20px_40px_rgba(0,0,0,0.25)]`}>
+    <img src={image} alt={description} class={`w-full aspect-square object-contain`}  />
+</div>

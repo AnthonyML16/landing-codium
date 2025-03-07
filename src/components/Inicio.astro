@@ -1,0 +1,158 @@
+---
+import fondo from "../assets/fondo.webp";
+import logo from "../assets/logo.webp";
+import carpeta from "../assets/carpeta.webp";
+import infoCurso from "../assets/info_curso.webp";
+import meet from "../assets/icons/meet.svg";
+import drive from "../assets/icons/drive.svg";
+import youtube from "../assets/icons/youtube.svg";
+import Icono from "./Icono.astro";
+import Logo from "./Logo.astro";
+---
+
+<section class="relative mx-3 overflow-hidden rounded-2xl" id="inicio">
+  <section class="h-full w-full overflow-hidden rounded-2xl">
+    <img
+      src={fondo.src}
+      alt="Fondo de puntos"
+      class="absolute top-0 left-0 w-full h-full -z-2 object-cover opacity-50"
+    />
+    <div class="absolute top-20 -left-25 -z-1 rotate-10">
+      <img
+        src={carpeta.src}
+        alt="Imagen de carpeta"
+        class="opacity-50 drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]"
+      />
+      <Icono
+        position="absolute"
+        positionX="-bottom-10"
+        positionY="-right-2"
+        rotate="-rotate-10"
+        color="text-teal-600"
+      >
+        <div slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-medal"
+            ><path
+              d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"
+            ></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"
+            ></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"
+            ></circle><path d="M12 18v-2h-.5"></path></svg
+          >
+        </div>
+      </Icono>
+    </div>
+    <div class="absolute top-10 -right-25 -z-1 rotate-10">
+      <img
+        src={carpeta.src}
+        alt="Imagen de carpeta"
+        class="opacity-50 drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]"
+      />
+      <Icono
+        position="absolute"
+        positionX="-top-5"
+        positionY="-left-5"
+        rotate="-rotate-10"
+        color="text-teal-600"
+      >
+        <div slot="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-file-text"
+            ><path
+              d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+            ></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"
+            ></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg
+          >
+        </div>
+      </Icono>
+    </div>
+    <div class="absolute -bottom-20 -rotate-15 -left-5 -z-1">
+      <img
+        src={carpeta.src}
+        alt="Imagen de carpeta"
+        class="drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]"
+      />
+      <img
+        src={infoCurso.src}
+        alt="Imagen de información de curso"
+        class="absolute bottom-1.5 left-1.5 w-18/19 h-8/10"
+      />
+    </div>
+    <div class="absolute -bottom-20 -right-5 -z-1 rotate-5">
+      <img
+        src={carpeta.src}
+        alt="Imagen de carpeta"
+        class="drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]"
+      />
+      <Logo
+        position="absolute"
+        positionX="left-5"
+        positionY="top-15"
+        rotate="-rotate-10"
+        image={meet.src}
+        description="Logo Google Meet"
+      />
+      <Logo
+        position="absolute"
+        positionX="right-5"
+        positionY="top-15"
+        rotate="rotate-10"
+        image={youtube.src}
+        description="Logo Google Youtube"
+      />
+      <Logo
+        position="absolute"
+        positionX="left-17.5"
+        positionY="top-10"
+        rotate=""
+        image={drive.src}
+        description="Logo Google Drive"
+      />
+    </div>
+  </section>
+  <section
+    class="flex flex-col items-center justify-center px-7.5 py-35 space-y-10 border-1 border-gray-950/25 rounded-2xl"
+  >
+    <Logo
+      position="static"
+      positionX=""
+      positionY=""
+      rotate=""
+      image={logo.src}
+      description="Logo Codium Platform"
+    />
+    <h1
+      class="text-5xl/15 font-semibold text-gray-950 text-center text-balance"
+    >
+      Nueva forma de enseñanza <span class="text-zinc-400"
+        >flexible y accesible</span
+      >
+    </h1>
+    <p class="text-sm text-gray-950 text-center text-balance">
+      Solución innovadora para la educación en línea.
+    </p>
+    <a
+      href="#contacto"
+      class="font-regular text-white bg-orange-500 rounded-xl px-5 py-2 w-max"
+      >Solicitar demo</a
+    >
+  </section>
+</section>

@@ -1,0 +1,128 @@
+---
+import imagotipo from "../assets/imagotipo.webp";
+---
+
+<header class="bg-white sticky top-0 z-10">
+  <nav class="p-7.5 flex items-center justify-between">
+    <div class="flex">
+      <a href="#" class="-m-1.5 p-1.5">
+        <img
+          class="h-6 w-auto"
+          src={imagotipo.src}
+          alt="Logo Codium Platform"
+        />
+      </a>
+    </div>
+    <div class="flex">
+      <button type="button" class="text-gray-700" id="button-menu-open">
+        <svg
+          class="size-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          data-slot="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div
+    class="fixed top-0 -left-full transition-position transition-discrete duration-1000 ease-in-out z-10 size-full overflow-y-auto bg-white p-7.5"
+    role="dialog"
+    aria-modal="true"
+    id="menu"
+  >
+    <div class="flex items-center justify-between">
+      <a href="#inicio">
+        <img
+          class="h-6 w-auto"
+          src={imagotipo.src}
+          alt="Logo Codium Platform"
+        />
+      </a>
+      <button type="button" class="text-gray-700" id="button-menu-close">
+        <svg
+          class="size-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          data-slot="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="mt-10">
+      <nav class="py-6">
+        <ul class="space-y-3">
+          <li>
+            <a href="#caracteristicas" class="font-regular text-gray-950"
+              >Características</a
+            >
+          </li>
+          <li>
+            <a href="#soluciones" class="font-regular text-gray-950"
+              >Soluciones</a
+            >
+          </li>
+          <li>
+            <a href="#beneficios" class="font-regular text-gray-950"
+              >Beneficios</a
+            >
+          </li>
+          <li>
+            <a href="#planes" class="font-regular text-gray-950">Planes</a>
+          </li>
+          <li>
+            <a href="#contacto" class="font-regular text-gray-950">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="py-6 border-t border-gray-200 flex flex-col gap-5">
+        <a href="#contacto" class="font-regular text-gray-950">Solicitar demo</a
+        >
+        <a
+          href="https://codium.codfor.com/"
+          class="font-regular text-gray-950 border border-gray-950 rounded-xl px-5 py-2 w-max"
+          >Iniciar sesión</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const buttonMenuOpen = document.getElementById("button-menu-open");
+  const buttonMenuClose = document.getElementById("button-menu-close");
+  const menu = document.getElementById("menu");
+
+  if (buttonMenuOpen && menu) {
+    buttonMenuOpen.addEventListener("click", () => {
+      menu.classList.toggle("left-0");
+    });
+  }
+
+  if (buttonMenuClose && menu) {
+    buttonMenuClose.addEventListener("click", () => {
+      menu.classList.toggle("left-0");
+    });
+  }
+
+  window.addEventListener("scroll", function () {
+    if (menu && menu.classList.contains("left-0") && window.scrollY > 0) {
+      menu.classList.toggle("left-0");
+    }
+  });
+</script>
