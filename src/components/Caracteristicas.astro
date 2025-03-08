@@ -4,27 +4,25 @@ import admCursos2 from "../assets/adm_cursos_2.webp";
 import admCursos3 from "../assets/adm_cursos_3.webp";
 import certificado from "../assets/certificado.webp";
 import Icono from "./Icono.astro";
+import NameSection from "./NameSection.astro";
+import TitleSection from "./TitleSection.astro";
 ---
 
 <section
   class="mx-5 mt-15 flex flex-col items-center text-center"
   id="caracteristicas"
 >
-  <h2
-    class="py-2.5 px-10 text-gray-950 rounded-full border-1 border-gray-950 shadow-2xl w-max"
-  >
-    Caracteristicas
-  </h2>
+  <NameSection name="Caracteristicas" />
 
-  <h3 class="mt-7.5 text-3xl font-semibold text-balance">
-    Muchas funciones en un solo lugar
-  </h3>
+  <TitleSection title="Muchas funciones en un solo lugar" />
 
-  <p class="mt-4">Todo el contenido de forma rápida y sencilla</p>
+  <p class="mt-4 reveal-fade-up">
+    Todo el contenido de forma rápida y sencilla
+  </p>
 
   <div class="w-full mt-7.5 grid gap-5">
     <div
-      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl p-7.5 shadow-2xl hover:bg-white hover:border-none"
+      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl p-7.5 shadow-2xl hover:bg-white hover:border-none reveal-fade-up"
     >
       <div class="relative w-full h-50">
         <Icono
@@ -120,7 +118,7 @@ import Icono from "./Icono.astro";
     </div>
 
     <div
-      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl py-7.5 shadow-2xl overflow-hidden hover:bg-white hover:border-none"
+      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl py-7.5 shadow-2xl overflow-hidden hover:bg-white hover:border-none reveal-fade-up"
     >
       <div class="w-full h-50 flex items-center justify-between">
         <img
@@ -147,7 +145,7 @@ import Icono from "./Icono.astro";
     </div>
 
     <div
-      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl p-7.5 shadow-2xl hover:bg-white hover:border-none"
+      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl p-7.5 shadow-2xl hover:bg-white hover:border-none reveal-fade-up"
     >
       <div class="relative w-full h-50">
         <div class="absolute top-3 w-full flex justify-between">
@@ -404,7 +402,7 @@ import Icono from "./Icono.astro";
     </div>
 
     <div
-      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl p-7.5 shadow-2xl hover:bg-white hover:border-none"
+      class="space-y-4 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl p-7.5 shadow-2xl hover:bg-white hover:border-none reveal-fade-up"
     >
       <div class="relative w-full h-50 flex items-center justify-center">
         <img
@@ -473,5 +471,5 @@ import Icono from "./Icono.astro";
     </div>
   </div>
 
-  <p class="pt-7.5">y muchas funciones más por venir.</p>
+  <p class="pt-7.5 reveal-fade-up">y muchas funciones más por venir.</p>
 </section>

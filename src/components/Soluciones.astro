@@ -1,20 +1,16 @@
 ---
 import inicioPersonal from "../assets/inicio_personal.webp";
+import NameSection from "./NameSection.astro";
+import TitleSection from "./TitleSection.astro";
 ---
 
 <section class="relative mx-5 mt-15 flex flex-col items-center" id="soluciones">
-  <h2
-    class="py-2.5 px-10 text-gray-950 rounded-full border-1 border-gray-950 shadow-2xl w-max"
-  >
-    Soluciones
-  </h2>
+  <NameSection name="Soluciones" />
 
-  <h3 class="mt-7.5 text-3xl font-semibold text-balance">
-    Distintos formas de usar una misma plataforma
-  </h3>
+  <TitleSection title="Distintos formas de usar una misma plataforma" />
 
   <div class="w-full mt-7.5 grid gap-5 border-x-1 border-gray-950/25">
-    <div class="relative space-y-4 p-10 border-t-1 border-gray-950/25">
+    <div class="relative space-y-4 p-10 border-t-1 border-gray-950/25 reveal-fade-up">
       <div
         class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -left-2.5"
       >
@@ -51,7 +47,7 @@ import inicioPersonal from "../assets/inicio_personal.webp";
       </p>
     </div>
 
-    <div class="relative space-y-4 p-10 border-t-1 border-gray-950/25">
+    <div class="relative space-y-4 p-10 border-t-1 border-gray-950/25 reveal-fade-up">
       <div
         class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -left-2.5"
       >
@@ -88,7 +84,7 @@ import inicioPersonal from "../assets/inicio_personal.webp";
       </p>
     </div>
 
-    <div class="relative space-y-4 p-10 border-t-1 border-gray-950/25">
+    <div class="relative space-y-4 p-10 border-t-1 border-gray-950/25 reveal-fade-up">
       <div
         class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -left-2.5"
       >
@@ -123,7 +119,7 @@ import inicioPersonal from "../assets/inicio_personal.webp";
       </p>
     </div>
 
-    <div class="mx-2.5 pt-5 px-5 rounded-x-2xl rounded-t-2xl bg-orange-500">
+    <div class="mx-2.5 pt-5 px-5 rounded-x-2xl rounded-t-2xl bg-orange-500 reveal-fade-up">
         <img src={inicioPersonal.src} alt="Vista de inicio de personal" />
     </div>
   </div>
