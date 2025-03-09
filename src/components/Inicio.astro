@@ -10,7 +10,10 @@ import Icono from "./Icono.astro";
 import Logo from "./Logo.astro";
 ---
 
-<section class="relative mx-3 overflow-hidden rounded-2xl animate-fade-up" id="inicio">
+<section
+  class="relative mx-3 overflow-hidden rounded-2xl animate-fade-up"
+  id="inicio"
+>
   <section class="h-full w-full overflow-hidden rounded-2xl">
     <img
       src={fondo.src}
@@ -131,14 +134,15 @@ import Logo from "./Logo.astro";
   <section
     class="flex flex-col items-center justify-center px-7.5 py-35 space-y-10 border-1 border-gray-950/25 rounded-2xl"
   >
-    <Logo
-      position="static"
-      positionX=""
-      positionY=""
-      rotate=""
-      image={logo.src}
-      description="Logo Codium Platform"
-    />
+    <div
+      class="w-20 p-5 bg-white rounded-xl shadow-[20px_20px_40px_rgba(0,0,0,0.25)] hover:scale-110 transition-transform duration-500"
+    >
+      <img
+        src={logo.src}
+        alt="Logo Codium Platform"
+        class=`w-full aspect-square object-contain`
+      />
+    </div>
     <h1
       class="text-5xl/15 font-semibold text-gray-950 text-center text-balance"
     >

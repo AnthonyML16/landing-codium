@@ -73,6 +73,12 @@
 }
     
 @layer utilities {
+    .reveal-fade {
+        animation: fade 1s ease-out both;
+        animation-timeline: view();
+        animation-range: entry 15% cover 30%;
+    }
+
     .reveal-fade-up {
         animation: fade-up 1s ease-out both;
         animation-timeline: view();
@@ -81,6 +87,18 @@
     
     .reveal-fade-down {
         animation: fade-down 1s ease-out both;
+        animation-timeline: view();
+        animation-range: entry 15% cover 30%;
+    }
+    
+    .reveal-fade-left {
+        animation: fade-left 1s ease-out both;
+        animation-timeline: view();
+        animation-range: entry 15% cover 30%;
+    }
+    
+    .reveal-fade-right {
+        animation: fade-right 1s ease-out both;
         animation-timeline: view();
         animation-range: entry 15% cover 30%;
     }
