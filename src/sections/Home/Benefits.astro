@@ -4,7 +4,7 @@ import NameSection from "../../components/UI/NameSection.astro";
 import TitleSection from "../../components/UI/TitleSection.astro";
 ---
 
-<section class="px-3 pt-15 flex flex-col items-center" id="beneficios">
+<section class="px-3 pt-15 flex flex-col items-center overflow-clip" id="beneficios">
   <NameSection name="Beneficios" />
 
   <TitleSection title="Muchos beneficios para compartir" />
@@ -40,9 +40,11 @@ import TitleSection from "../../components/UI/TitleSection.astro";
       text="Herramientas para administrar cursos y materiales de forma intuitiva."
       reveal="right"
     />
-    <Card
-      text="Te ayudamos en cada paso para que aproveches al máximo nuestra plataforma."
-      reveal="up"
-    />
+    <div class="md:col-span-2 lg:col-span-1">
+      <Card
+        text="Te ayudamos en cada paso para que aproveches al máximo nuestra plataforma."
+        reveal="up"
+      />
+    </div>
   </div>
 </section>
