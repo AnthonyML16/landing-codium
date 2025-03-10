@@ -1,0 +1,6 @@
+---
+const { buttonId } = Astro.props;
+---
+<button type="button" class="text-gray-700 hover:text-gray-950 transition-colors duration-500" id={buttonId}>
+    <slot />
+</button>

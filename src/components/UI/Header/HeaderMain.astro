@@ -1,20 +1,19 @@
 ---
-import imagotipo from "../assets/imagotipo.webp";
+import Imagotipo from "../Imagotipo.astro";
+import ButtonAction from "./ButtonAction.astro";
+import Link from "./Link.astro";
+import LinkButton from "./LinkButton.astro";
 ---
 
 <header class="bg-white sticky top-0 z-10">
   <nav class="p-7.5 flex items-center justify-between">
     <div class="flex">
-      <a href="#" class="-m-1.5 p-1.5">
-        <img
-          class="h-6 w-auto"
-          src={imagotipo.src}
-          alt="Logo Codium Platform"
-        />
+      <a href="#home" class="-m-1.5 p-1.5">
+        <Imagotipo />
       </a>
     </div>
     <div class="flex">
-      <button type="button" class="text-gray-700" id="button-menu-open">
+      <ButtonAction buttonId="button-menu-open">
         <svg
           class="size-6"
           fill="none"
@@ -29,25 +28,21 @@ import imagotipo from "../assets/imagotipo.webp";
             stroke-linejoin="round"
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
-      </button>
+      </ButtonAction>
     </div>
   </nav>
 
   <div
-    class="absolute top-0 -left-full transition-position transition-discrete duration-1000 ease-in-out z-20 w-full h-screen overflow-y-auto bg-white p-7.5"
+    class="absolute top-0 -left-full transition-position transition-discrete duration-1000 ease-in-out z-20 w-full h-screen overflow-y-auto bg-white p-7.5 md:w-md md:shadow-2xl"
     role="dialog"
     aria-modal="true"
     id="menu"
   >
     <div class="flex items-center justify-between">
       <a href="#inicio">
-        <img
-          class="h-6 w-auto"
-          src={imagotipo.src}
-          alt="Logo Codium Platform"
-        />
+        <Imagotipo />
       </a>
-      <button type="button" class="text-gray-700" id="button-menu-close">
+      <ButtonAction buttonId="button-menu-close">
         <svg
           class="size-6"
           fill="none"
@@ -62,43 +57,22 @@ import imagotipo from "../assets/imagotipo.webp";
             stroke-linejoin="round"
             d="M6 18 18 6M6 6l12 12"></path>
         </svg>
-      </button>
+      </ButtonAction>
     </div>
     <div class="mt-10">
       <nav class="py-6">
         <ul class="space-y-3">
-          <li>
-            <a href="#caracteristicas" class="font-regular text-gray-950"
-              >Características</a
-            >
-          </li>
-          <li>
-            <a href="#soluciones" class="font-regular text-gray-950"
-              >Soluciones</a
-            >
-          </li>
-          <li>
-            <a href="#beneficios" class="font-regular text-gray-950"
-              >Beneficios</a
-            >
-          </li>
-          <li>
-            <a href="#planes" class="font-regular text-gray-950">Planes</a>
-          </li>
-          <li>
-            <a href="#contacto" class="font-regular text-gray-950">Contacto</a>
-          </li>
+          <li><Link direction="#caracteristicas" text="Características" /></li>
+          <li><Link direction="#soluciones" text="Soluciones" /></li>
+          <li><Link direction="#beneficios" text="Beneficios" /></li>
+          <li><Link direction="#planes" text="Planes" /></li>
+          <li><Link direction="#contacto" text="Contacto" /></li>
         </ul>
       </nav>
-      <div class="py-6 border-t border-gray-200 flex flex-col gap-5">
-        <a href="#contacto" class="font-regular text-gray-950">Solicitar demo</a
-        >
-        <a
-          href="https://codium.codfor.com/"
-          class="font-regular text-gray-950 border border-gray-950 rounded-xl px-5 py-2 w-max"
-          >Iniciar sesión</a
-        >
-      </div>
+      <ul class="py-6 border-t border-gray-200 space-y-5">
+        <li><Link direction="#contacto" text="Solicitar demo" /></li>
+        <li><LinkButton /></li>
+      </ul>
     </div>
   </div>
 </header>

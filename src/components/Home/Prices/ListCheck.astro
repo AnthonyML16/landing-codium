@@ -1,10 +1,8 @@
 ---
-const { text, color } = Astro.props;
-
-const color_text = color === "white" ? "text-white" : "text-black";
+const { text } = Astro.props;
 ---
 
-<li class=`${color_text} space-x-2.5 flex items-center`>
+<li class=`space-x-2.5 flex items-center`>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"

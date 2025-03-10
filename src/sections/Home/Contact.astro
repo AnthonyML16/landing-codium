@@ -1,0 +1,21 @@
+---
+import Button from "../../components/Home/Contact/Button.astro";
+import Input from "../../components/Home/Contact/Input.astro";
+import TextArea from "../../components/Home/Contact/TextArea.astro";
+import NameSection from "../../components/UI/NameSection.astro";
+import TitleSection from "../../components/UI/TitleSection.astro";
+---
+
+<section class="mx-5 mt-15 flex flex-col items-center" id="contacto">
+  <NameSection name="Contacto" />
+  <TitleSection title="Comencemos un nuevo camino juntos" />
+
+  <form action="#" method="get" class="w-full grid mt-7.5 gap-5">
+    <Input identifier="name" label="Nombres y apellidos" type="text" placeholder="Guillermo mendoza" />
+    <Input identifier="email" label="Correo electrónico" type="email" placeholder="guillermo@gmail.com" />
+    <Input identifier="phone" label="Teléfono" type="tel" placeholder="+51999888777" />
+    <TextArea identifier="message" label="Mensaje" rows="4" placeholder="Deseo obtener mayor información sobre la plataforma codium y agendar una cita para una demostración." />
+
+    <Button type="submit" text="Solicitar" />
+  </form>
+</section>

@@ -1,0 +1,57 @@
+---
+import Fondo from "./Fondo.astro";
+import Imagotipo from "../Imagotipo.astro";
+import TextMain from "./TextMain.astro";
+import LinkArrow from "./LinkArrow.astro";
+import TextCopyright from "./TextCopyright.astro";
+import Link from "../Header/Link.astro";
+---
+
+<section
+  class="relative mx-3 mt-15 mb-3 overflow-hidden rounded-2xl reveal-fade-up"
+>
+  <section class="h-full w-full overflow-hidden rounded-2xl">
+    <Fondo />
+  </section>
+
+  <section
+    class="grid justify-center px-10 py-7.5 gap-10 border-1 border-gray-950/25 rounded-2xl"
+  >
+    <div class="space-y-5 flex flex-col items-center text-center">
+      <a href="#home" class="hover:scale-105 transition-all duration-500">
+        <Imagotipo />
+      </a>
+      <TextMain text="Nueva forma de enseñanza flexible y accesible" />
+    </div>
+
+    <div>
+      <ul class="space-y-2.5 flex flex-col items-center text-center">
+        <li><LinkArrow enlace="#caracteristicas" text="Características" /></li>
+        <li><LinkArrow enlace="#soluciones" text="Soluciones" /></li>
+        <li><LinkArrow enlace="#beneficios" text="Beneficios" /></li>
+        <li><LinkArrow enlace="#planes" text="Planes" /></li>
+        <li><LinkArrow enlace="#contacto" text="Contacto" /></li>
+        <li><LinkArrow enlace="#" text="Certificados" /></li>
+      </ul>
+    </div>
+
+    <hr class="border-gray-950/25" />
+
+    <div class="flex flex-col gap-5 items-center">
+      <TextCopyright />
+      <div class="flex flex-col items-center gap-2.5">
+        <Link enlace="#" text="Políticas de privacidad" />
+        <Link enlace="#" text="Términos de uso" />
+      </div>
+    </div>
+  </section>
+</section>
+
+<script>
+  const camp_data = document.querySelector(".copyright-year");
+  const year = new Date().getFullYear();
+
+  if (camp_data && year) {
+    camp_data.innerHTML = year.toString();
+  }
+</script>

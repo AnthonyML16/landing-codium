@@ -1,25 +1,27 @@
 ---
 import "../styles/global.css";
-import Layout from '../layouts/Layout.astro';
-import Menu from '../components/Menu.astro';
-import Inicio from "../components/Inicio.astro";
-import Caracteristicas from "../components/Caracteristicas.astro";
-import Soluciones from "../components/Soluciones.astro";
-import Beneficios from "../components/Beneficios.astro";
-import Planes from "../components/Planes.astro";
-import Contacto from "../components/Contacto.astro";
-import Cierre from "../components/Cierre.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/UI/Header/HeaderMain.astro";
+import Main from "../sections/Home/Main.astro";
+import Features from "../sections/Home/Features.astro";
+import Solutions from "../sections/Home/Solutions.astro";
+import Benefits from "../sections/Home/Benefits.astro";
+import Prices from "../sections/Home/Prices.astro";
+import Contact from "../sections/Home/Contact.astro";
+import Footer from "../components/UI/Footer/FooterMain.astro";
+import ScrollUp from "../components/UI/ScrollUp.astro";
 ---
 
 <Layout>
-	<Menu />
-	<main class="w-full h-full">
-		<Inicio />
-		<Caracteristicas />
-		<Soluciones />
-		<Beneficios />
-		<Planes	/>
-		<Contacto />
-		<Cierre />
-	</main>
+  <Header />
+  <main class="w-full h-full">
+    <Main />
+    <Features />
+    <Solutions />
+    <Benefits />
+    <Prices />
+    <Contact />
+  </main>
+  <Footer />
+  <ScrollUp />
 </Layout>

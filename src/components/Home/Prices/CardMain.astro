@@ -1,0 +1,21 @@
+---
+import LinkButtonMain from "./LinkButtonMain.astro";
+
+const { title, price } = Astro.props;
+---
+
+<div
+  class="w-full p-10 space-y-5 bg-orange-500 border-1 border-gray-950/25 rounded-xl reveal-fade-up hover:scale-102 transition-all duration-500"
+>
+  <h5 class="text-lg font-medium text-white">{title}</h5>
+  <hr class="border-white" />
+  <p class="text-white">Desde</p>
+  <p class="font-medium text-3xl text-white">
+    S/. {price}<span class="text-base text-gray-300">/mes</span>
+  </p>
+  <LinkButtonMain direction="#contacto" text="Solicitar" />
+  <hr class="border-white" />
+  <ul class="space-y-2 text-white">
+    <slot />
+  </ul>
+</div>

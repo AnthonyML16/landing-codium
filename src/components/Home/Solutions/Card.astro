@@ -1,0 +1,25 @@
+---
+const { title, description } = Astro.props;
+---
+
+<div
+  class="relative space-y-4 p-10 border-t-1 border-gray-950/25 reveal-fade-up"
+>
+  <div
+    class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -left-2.5"
+  >
+  </div>
+  <div
+    class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -right-2.5"
+  >
+  </div>
+
+  <div class="w-10 text-teal-600">
+    <slot />
+  </div>
+
+  <p class="text-xl font-semibold">{title}</p>
+  <p>
+    {description}
+  </p>
+</div>
