@@ -5,14 +5,14 @@ import Link from "./Link.astro";
 import LinkButton from "./LinkButton.astro";
 ---
 
-<header class="bg-white sticky top-0 z-10">
-  <nav class="p-7.5 flex items-center justify-between">
+<header class="w-full bg-white sticky top-0 z-10 transition-all duration-500" id="header">
+  <div class="p-7.5 flex items-center justify-between">
     <div class="flex">
       <a href="#home" class="-m-1.5 p-1.5">
         <Imagotipo />
       </a>
     </div>
-    <div class="flex">
+    <div class="flex lg:hidden">
       <ButtonAction buttonId="button-menu-open">
         <svg
           class="size-6"
@@ -30,10 +30,25 @@ import LinkButton from "./LinkButton.astro";
         </svg>
       </ButtonAction>
     </div>
-  </nav>
+
+    <nav class="max-lg:hidden">
+      <ul class="flex gap-10">
+        <li><Link direction="#caracteristicas" text="Características" /></li>
+        <li><Link direction="#soluciones" text="Soluciones" /></li>
+        <li><Link direction="#beneficios" text="Beneficios" /></li>
+        <li><Link direction="#planes" text="Planes" /></li>
+        <li><Link direction="#contacto" text="Contacto" /></li>
+      </ul>
+    </nav>
+
+    <ul class="max-lg:hidden flex gap-10">
+      <li><Link direction="#contacto" text="Solicitar demo" /></li>
+      <li><LinkButton /></li>
+    </ul>
+  </div>
 
   <div
-    class="absolute top-0 -left-full transition-position transition-discrete duration-1000 ease-in-out z-20 w-full h-screen overflow-y-auto bg-white p-7.5 md:w-md md:shadow-2xl"
+    class="absolute top-0 -left-full transition-position transition-discrete duration-1000 ease-in-out z-20 w-full h-screen overflow-y-auto bg-white p-7.5 md:w-md md:shadow-2xl lg:hidden"
     role="dialog"
     aria-modal="true"
     id="menu"
@@ -81,6 +96,7 @@ import LinkButton from "./LinkButton.astro";
   const buttonMenuOpen = document.getElementById("button-menu-open");
   const buttonMenuClose = document.getElementById("button-menu-close");
   const menu = document.getElementById("menu");
+  const header = document.getElementById("header");
 
   if (buttonMenuOpen && menu) {
     buttonMenuOpen.addEventListener("click", () => {
@@ -97,6 +113,16 @@ import LinkButton from "./LinkButton.astro";
   window.addEventListener("scroll", function () {
     if (menu && menu.classList.contains("left-0") && window.scrollY > 0) {
       menu.classList.toggle("left-0");
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0 && header  && !header.classList.contains("shadow-2xl")) {
+      header.classList.add("shadow-2xl");
+    }
+
+    if (window.scrollY == 0 && header) {
+      header.classList.remove("shadow-2xl");
     }
   });
 </script>

@@ -6,12 +6,12 @@ import CardMain from "../../components/Home/Prices/CardMain.astro";
 import ListCheck from "../../components/Home/Prices/ListCheck.astro";
 ---
 
-<section class="mx-5 mt-15 flex flex-col items-center" id="planes">
+<section class="px-5 pt-15 flex flex-col items-center" id="planes">
   <NameSection name="Planes" />
   <TitleSection title="Planes de precios simples" />
 
-  <div class="w-full grid mt-7.5 gap-5">
-    <CardSecond title="Plan Básico" price="75">
+  <div class="w-full grid mt-7.5 gap-5 md:grid-cols-2 md:flex md:items-center md:justify-center">
+    <CardSecond title="Plan Básico" price="75" reveal="right">
       <ListCheck text="Estudiantes ilimitados"/>
       <ListCheck text="Docentes ilimitados"/>
       <ListCheck text="Personal ilimitados"/>
@@ -20,7 +20,7 @@ import ListCheck from "../../components/Home/Prices/ListCheck.astro";
       <ListCheck text="Generación de certificados"/>
     </CardSecond>
 
-    <CardMain title="Plan Premium" price="100">
+    <CardMain title="Plan Premium" price="100" reveal="left">
       <ListCheck text="Estudiantes ilimitados"/>
       <ListCheck text="Docentes ilimitados"/>
       <ListCheck text="Personal ilimitados"/>

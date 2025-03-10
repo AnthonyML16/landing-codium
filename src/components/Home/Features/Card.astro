@@ -1,9 +1,22 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, reveal } = Astro.props;
+
+let left = reveal == "left" ? true : false;
+let right = reveal == "right" ? true : false;
+let up = reveal == "up" ? true : false;
+let down = reveal == "down" ? true : false;
+
+up = (!left && !right && !down) ?? true;
 ---
 
 <div
-  class="space-y-7.5 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl py-7.5 shadow-2xl overflow-hidden reveal-fade-up hover:bg-white hover:border-transparent hover:scale-102 transition-all duration-500"
+  class:list={[
+    "h-full space-y-7.5 border-1 bg-gray-950/3 border-gray-950/25 rounded-xl py-7.5 shadow-2xl overflow-hidden hover:bg-white hover:border-transparent hover:scale-102 transition-all duration-500",
+    { ["reveal-fade-left"]: left == true },
+    { ["reveal-fade-right"]: right == true },
+    { ["reveal-fade-up"]: up == true },
+    { ["reveal-fade-down"]: down == true }
+  ]}
 >
   <div class="relative w-full h-50">
     <slot />

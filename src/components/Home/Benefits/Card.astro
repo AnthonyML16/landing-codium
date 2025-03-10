@@ -1,9 +1,24 @@
 ---
-const { text } = Astro.props;
+const { text, reveal } = Astro.props;
+
+let left = reveal == "left" ? true : false;
+let right = reveal == "right" ? true : false;
+let up = reveal == "up" ? true : false;
+let down = reveal == "down" ? true : false;
+let center = reveal == "center" ? true : false;
+
+up = (!left && !right && !down && !center) ?? true;
 ---
 
 <div
-  class="p-7.5 text-center bg-gray-950/3 border-1 border-gray-950/25 rounded-xl reveal-fade-up hover:bg-white hover:border-transparent hover:scale-102 hover:shadow-2xl transition-all duration-500"
+  class:list={[
+    "h-full p-7.5 flex text-center items-center bg-gray-950/3 border-1 border-gray-950/25 rounded-xl hover:bg-white hover:border-transparent hover:scale-102 hover:shadow-2xl transition-all duration-500",
+    { ["reveal-fade-left"]: left == true },
+    { ["reveal-fade-right"]: right == true },
+    { ["reveal-fade-up"]: up == true },
+    { ["reveal-fade-down"]: down == true },
+    { ["reveal-fade"]: center == true }
+  ]}
 >
   <p>
     {text}

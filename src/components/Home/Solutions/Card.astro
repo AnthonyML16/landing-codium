@@ -1,16 +1,29 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, reveal } = Astro.props;
+
+let left = reveal == "left" ? true : false;
+let right = reveal == "right" ? true : false;
+let up = reveal == "up" ? true : false;
+let down = reveal == "down" ? true : false;
+
+up = (!left && !right && !down) ?? true;
 ---
 
 <div
-  class="relative space-y-4 p-10 border-t-1 border-gray-950/25 reveal-fade-up"
+  class:list={[
+    `relative space-y-4 p-10 border-t-1 border-gray-950/25 w-full lg:border-x-1`,
+    { ["reveal-fade-left"]: left == true },
+    { ["reveal-fade-right"]: right == true },
+    { ["reveal-fade-up"]: up == true },
+    { ["reveal-fade-down"]: down == true }
+  ]}
 >
   <div
-    class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -left-2.5"
+    class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -left-2.5 lg:-left-3"
   >
   </div>
   <div
-    class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -right-2.5"
+    class="w-5 h-5 bg-white border-1 border-gray-950/25 rounded-full absolute -top-2.5 -right-2.5 lg:-right-2.5"
   >
   </div>
 

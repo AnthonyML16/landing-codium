@@ -1,11 +1,24 @@
 ---
 import LinkButtonSecond from "./LinkButtonSecond.astro";
 
-const { title, price } = Astro.props;
+const { title, price, reveal } = Astro.props;
+
+let left = reveal == "left" ? true : false;
+let right = reveal == "right" ? true : false;
+let up = reveal == "up" ? true : false;
+let down = reveal == "down" ? true : false;
+
+up = (!left && !right && !down) ?? true;
 ---
 
 <div
-  class="w-full p-10 space-y-5 bg-gray-950/3 border-1 border-gray-950/25 rounded-xl reveal-fade-up hover:scale-102 transition-all duration-500"
+  class:list={[
+    "w-full h-max p-10 space-y-5 bg-gray-950/3 border-1 border-gray-950/25 rounded-xl reveal-fade-up hover:scale-102 transition-all duration-500  max-w-lg",
+    { ["reveal-fade-left"]: left == true },
+    { ["reveal-fade-right"]: right == true },
+    { ["reveal-fade-up"]: up == true },
+    { ["reveal-fade-down"]: down == true },
+  ]}
 >
   <h5 class="text-lg font-medium">{title}</h5>
   <hr class="border-gray-950/25" />

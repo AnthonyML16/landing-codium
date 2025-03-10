@@ -8,38 +8,51 @@ import Link from "../Header/Link.astro";
 ---
 
 <section
-  class="relative mx-3 mt-15 mb-3 overflow-hidden rounded-2xl reveal-fade-up"
+  class="w-screen relative mx-3 mt-15 mb-3 overflow-hidden rounded-2xl reveal-fade-up"
 >
   <section class="h-full w-full overflow-hidden rounded-2xl">
     <Fondo />
   </section>
 
   <section
-    class="grid justify-center px-10 py-7.5 gap-10 border-1 border-gray-950/25 rounded-2xl"
+    class="w-full grid px-10 py-7.5 gap-10 border-1 border-gray-950/25 rounded-2xl lg:p-12.5"
   >
-    <div class="space-y-5 flex flex-col items-center text-center">
-      <a href="#home" class="hover:scale-105 transition-all duration-500">
-        <Imagotipo />
-      </a>
-      <TextMain text="Nueva forma de enseñanza flexible y accesible" />
-    </div>
+    <div class="w-full flex flex-col gap-5 justify-between md:flex-row">
+      <div
+        class="space-y-5 flex flex-col items-center text-center md:items-start"
+      >
+        <a href="#home" class="hover:scale-105 transition-all duration-500">
+          <Imagotipo />
+        </a>
+        <TextMain text="Nueva forma de enseñanza flexible y accesible" />
+      </div>
 
-    <div>
-      <ul class="space-y-2.5 flex flex-col items-center text-center">
-        <li><LinkArrow enlace="#caracteristicas" text="Características" /></li>
-        <li><LinkArrow enlace="#soluciones" text="Soluciones" /></li>
-        <li><LinkArrow enlace="#beneficios" text="Beneficios" /></li>
-        <li><LinkArrow enlace="#planes" text="Planes" /></li>
-        <li><LinkArrow enlace="#contacto" text="Contacto" /></li>
-        <li><LinkArrow enlace="#" text="Certificados" /></li>
-      </ul>
+      <div class="flex flex-col gap-2.5 md:flex-row md:mt-10 md:gap-7.5">
+        <ul
+          class="space-y-2.5 flex flex-col items-center text-center md:items-start"
+        >
+          <li>
+            <LinkArrow enlace="#caracteristicas" text="Características" />
+          </li>
+          <li><LinkArrow enlace="#soluciones" text="Soluciones" /></li>
+          <li><LinkArrow enlace="#beneficios" text="Beneficios" /></li>
+        </ul>
+
+        <ul
+          class="space-y-2.5 flex flex-col items-center text-center md:items-start"
+        >
+          <li><LinkArrow enlace="#planes" text="Planes" /></li>
+          <li><LinkArrow enlace="#contacto" text="Contacto" /></li>
+          <li><LinkArrow enlace="#" text="Certificados" /></li>
+        </ul>
+      </div>
     </div>
 
     <hr class="border-gray-950/25" />
 
-    <div class="flex flex-col gap-5 items-center">
+    <div class="flex flex-col gap-5 items-center md:flex-row md:justify-between">
       <TextCopyright />
-      <div class="flex flex-col items-center gap-2.5">
+      <div class="flex flex-col items-center gap-2.5 md:flex-row md:gap-7.5">
         <Link enlace="#" text="Políticas de privacidad" />
         <Link enlace="#" text="Términos de uso" />
       </div>

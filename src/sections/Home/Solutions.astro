@@ -9,10 +9,11 @@ import ImagePlatform from "../../components/Home/Solutions/ImagePlatform.astro";
   <NameSection name="Soluciones" />
   <TitleSection title="Distintos formas de usar una misma plataforma" />
 
-  <div class="w-full mt-7.5 grid gap-5 border-x-1 border-gray-950/25">
+  <div class="w-full mt-7.5 grid gap-5 border-x-1 border-gray-950/25 md:grid-cols-2 md:gap-x-0 lg:grid-cols-3 lg:gap-0">
     <Card
       title="Centros de formación"
       description="Centros de educación y academias que buscan digitalizar su enseñanza y expandir su alcance."
+      reveal="right"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -36,6 +37,7 @@ import ImagePlatform from "../../components/Home/Solutions/ImagePlatform.astro";
     <Card
       title="Capacitación Empresarial"
       description="Formación interna con certificaciones digitales y seguimiento de desempeño."
+      reveal="down"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -56,26 +58,30 @@ import ImagePlatform from "../../components/Home/Solutions/ImagePlatform.astro";
       >
     </Card>
 
-    <Card
-      title="Cursos independientes"
-      description="Profesionales que desean ofrecer sus propios cursos en línea con facilidad de administración."
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="100%"
-        height="100%"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-house"
-        ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path
-          d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-        ></path></svg
+    <div class="md:col-span-2 lg:col-span-1">
+      <Card
+        title="Cursos independientes"
+        description="Profesionales que desean ofrecer sus propios cursos en línea con facilidad de administración."
+        reveal="left"
+        spanMd="col-span-full"
       >
-    </Card>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-house"
+          ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path
+            d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+          ></path></svg
+        >
+      </Card>
+    </div>
 
     <ImagePlatform />
   </div>

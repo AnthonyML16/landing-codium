@@ -19,8 +19,12 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
   <TitleSection title="Muchas funciones en un solo lugar" />
   <TextSubtitle />
 
-  <div class="w-full mt-7.5 grid gap-5">
-    <Card title="Gestión de usuarios" description="Perfiles dedicados para personal, docentes y estudiantes, y permisos para el personal.">
+  <div class="w-full mt-7.5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <Card
+      title="Gestión de usuarios"
+      description="Perfiles dedicados para personal, docentes y estudiantes, y permisos para el personal."
+      reveal="right"
+    >
       <div class="absolute top-10 w-full flex justify-center gap-10">
         <Icon
           position=""
@@ -111,275 +115,291 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
       </div>
     </Card>
 
-    <Card title="Administración de cursos" description="Capacidad de tener una gran cantidad de cursos que se pueden segmentar por categorías y niveles para un mayor orden.">
-      <div class="w-full h-50 flex items-center justify-between gap-2">
-        <img
-          src={admCursos1.src}
-          alt="Imagen de información de cursos"
-          class="w-3/10 max-h-40 object-contain object-left"
-        />
-        <img
-          src={admCursos2.src}
-          alt="Imagen de información de cursos"
-          class="w-4/10 max-h-50 object-contain"
-        />
-        <img
-          src={admCursos3.src}
-          alt="Imagen de información de cursos"
-          class="w-3/10 max-h-40 object-contain object-right"
-        />
-      </div>
-    </Card>
+    <div class="h-full lg:col-span-2">
+      <Card
+        title="Administración de cursos"
+        description="Capacidad de tener una gran cantidad de cursos que se pueden segmentar por categorías y niveles para un mayor orden."
+        reveal="down"
+      >
+        <div class="w-full h-50 flex items-center justify-between gap-2">
+          <img
+            src={admCursos1.src}
+            alt="Imagen de información de cursos"
+            class="w-3/10 max-h-40 object-contain object-left"
+          />
+          <img
+            src={admCursos2.src}
+            alt="Imagen de información de cursos"
+            class="w-4/10 max-h-50 object-contain"
+          />
+          <img
+            src={admCursos3.src}
+            alt="Imagen de información de cursos"
+            class="w-3/10 max-h-40 object-contain object-right"
+          />
+        </div>
+      </Card>
+    </div>
 
-    <Card title="Materiales para el aprendizaje" description="Se pueden publicar distintos tipos de materiales para que los estudiantes tengan el acceso más completo al curso.">
-      <div class="absolute top-3 w-full flex justify-center gap-1">
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="-rotate-10"
-          color="text-gray-950"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-tv-minimal-play"
-              ><path
-                d="M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z"
-              ></path><path d="M7 21h10"></path><rect
-                width="20"
-                height="14"
-                x="2"
-                y="3"
-                rx="2"></rect></svg
-            >
-          </div>
-        </Icon>
+    <div class="h-full lg:col-span-2">
+      <Card
+        title="Materiales para el aprendizaje"
+        description="Se pueden publicar distintos tipos de materiales para que los estudiantes tengan el acceso más completo al curso."
+        reveal="-up"
+      >
+        <div class="absolute top-3 w-full flex justify-center gap-1">
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="-rotate-10"
+            color="text-gray-950"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-tv-minimal-play"
+                ><path
+                  d="M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z"
+                ></path><path d="M7 21h10"></path><rect
+                  width="20"
+                  height="14"
+                  x="2"
+                  y="3"
+                  rx="2"></rect></svg
+              >
+            </div>
+          </Icon>
 
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="rotate-20"
-          color="text-teal-600"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-video"
-              ><path
-                d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"
-              ></path><rect x="2" y="6" width="14" height="12" rx="2"
-              ></rect></svg
-            >
-          </div>
-        </Icon>
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="rotate-20"
+            color="text-teal-600"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-video"
+                ><path
+                  d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"
+                ></path><rect x="2" y="6" width="14" height="12" rx="2"
+                ></rect></svg
+              >
+            </div>
+          </Icon>
 
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="-rotate-7.5"
-          color="text-orange-500"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-file-code-2"
-              ><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"
-              ></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path
-                d="m5 12-3 3 3 3"></path><path d="m9 18 3-3-3-3"></path></svg
-            >
-          </div>
-        </Icon>
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="-rotate-7.5"
+            color="text-orange-500"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-file-code-2"
+                ><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"
+                ></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path
+                  d="m5 12-3 3 3 3"></path><path d="m9 18 3-3-3-3"></path></svg
+              >
+            </div>
+          </Icon>
 
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="rotate-20"
-          color="text-teal-600"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-table-2"
-              ><path
-                d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
-              ></path></svg
-            >
-          </div>
-        </Icon>
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="rotate-20"
+            color="text-teal-600"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-table-2"
+                ><path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
+                ></path></svg
+              >
+            </div>
+          </Icon>
 
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="rotate-5"
-          color="text-gray-950"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-presentation"
-              ><path d="M2 3h20"></path><path
-                d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"></path><path
-                d="m7 21 5-5 5 5"></path></svg
-            >
-          </div>
-        </Icon>
-      </div>
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="rotate-5"
+            color="text-gray-950"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-presentation"
+                ><path d="M2 3h20"></path><path
+                  d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"></path><path
+                  d="m7 21 5-5 5 5"></path></svg
+              >
+            </div>
+          </Icon>
+        </div>
 
-      <div class="absolute bottom-3 w-full flex justify-center gap-1">
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="rotate-15"
-          color="text-teal-600"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-music"
-              ><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"
-              ></circle><circle cx="18" cy="16" r="3"></circle></svg
-            >
-          </div>
-        </Icon>
+        <div class="absolute bottom-3 w-full flex justify-center gap-1">
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="rotate-15"
+            color="text-teal-600"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-music"
+                ><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"
+                ></circle><circle cx="18" cy="16" r="3"></circle></svg
+              >
+            </div>
+          </Icon>
 
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="-rotate-15"
-          color="text-orange-500"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-image"
-              ><rect width="18" height="18" x="3" y="3" rx="2" ry="2"
-              ></rect><circle cx="9" cy="9" r="2"></circle><path
-                d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg
-            >
-          </div>
-        </Icon>
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="-rotate-15"
+            color="text-orange-500"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-image"
+                ><rect width="18" height="18" x="3" y="3" rx="2" ry="2"
+                ></rect><circle cx="9" cy="9" r="2"></circle><path
+                  d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg
+              >
+            </div>
+          </Icon>
 
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="rotate-17.5"
-          color="text-gray-950"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-folder-archive"
-              ><circle cx="15" cy="19" r="2"></circle><path
-                d="M20.9 19.8A2 2 0 0 0 22 18V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h5.1"
-              ></path><path d="M15 11v-1"></path><path d="M15 17v-2"
-              ></path></svg
-            >
-          </div>
-        </Icon>
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="rotate-17.5"
+            color="text-gray-950"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-folder-archive"
+                ><circle cx="15" cy="19" r="2"></circle><path
+                  d="M20.9 19.8A2 2 0 0 0 22 18V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h5.1"
+                ></path><path d="M15 11v-1"></path><path d="M15 17v-2"
+                ></path></svg
+              >
+            </div>
+          </Icon>
 
-        <Icon
-          position=""
-          positionX=""
-          positionY=""
-          rotate="-rotate-15"
-          color="text-orange-500"
-        >
-          <div slot="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100%"
-              height="100%"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-file-text"
-              ><path
-                d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
-              ></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path
-                d="M10 9H8"></path><path d="M16 13H8"></path><path
-                d="M16 17H8"></path></svg
-            >
-          </div>
-        </Icon>
-      </div>
-    </Card>
+          <Icon
+            position=""
+            positionX=""
+            positionY=""
+            rotate="-rotate-15"
+            color="text-orange-500"
+          >
+            <div slot="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-file-text"
+                ><path
+                  d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+                ></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path
+                  d="M10 9H8"></path><path d="M16 13H8"></path><path
+                  d="M16 17H8"></path></svg
+              >
+            </div>
+          </Icon>
+        </div>
+      </Card>
+    </div>
 
-    <Card title="Inscripciones y certificados" description="Manejo de inscripciones rápida y emisión de certificados con página para su validación.">
+    <Card
+      title="Inscripciones y certificados"
+      description="Manejo de inscripciones rápida y emisión de certificados con página para su validación."
+      reveal="left"
+    >
       <div class="w-full h-50 flex items-center justify-center">
         <div class="relative w-max">
           <img
@@ -409,9 +429,11 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
                 class="lucide lucide-medal"
                 ><path
                   d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"
-                ></path><path d="M11 12 5.12 2.2"></path><path d="m13 12 5.88-9.8"
-                ></path><path d="M8 7h8"></path><circle cx="12" cy="17" r="5"
-                ></circle><path d="M12 18v-2h-.5"></path></svg
+                ></path><path d="M11 12 5.12 2.2"></path><path
+                  d="m13 12 5.88-9.8"></path><path d="M8 7h8"></path><circle
+                  cx="12"
+                  cy="17"
+                  r="5"></circle><path d="M12 18v-2h-.5"></path></svg
               >
             </div>
           </Icon>
