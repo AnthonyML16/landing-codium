@@ -13,18 +13,18 @@ up = (!left && !right && !down) ?? true;
 
 <div
   class:list={[
-    "w-full h-max p-10 space-y-5 bg-gray-950/3 border-1 border-gray-950/25 rounded-xl reveal-fade-up hover:scale-102 transition-all duration-500  max-w-lg",
+    "w-full h-max p-10 space-y-5 bg-gray-950/3 border-1 border-gray-950/25 rounded-xl reveal-fade-up hover:scale-102 transition-all duration-500  max-w-lg 2xl:text-2xl",
     { ["reveal-fade-left"]: left == true },
     { ["reveal-fade-right"]: right == true },
     { ["reveal-fade-up"]: up == true },
     { ["reveal-fade-down"]: down == true },
   ]}
 >
-  <h5 class="text-lg font-medium">{title}</h5>
+  <h5 class="text-lg font-medium 2xl:text-2xl">{title}</h5>
   <hr class="border-gray-950/25" />
   <p>Desde</p>
-  <p class="font-medium text-3xl">
-    S/. {price}<span class="text-base text-gray-300">/mes</span>
+  <p class="font-medium text-3xl 2xl:text-4xl">
+    S/. {price}<span class="text-base text-gray-300 2xl:text-xl">/mes</span>
   </p>
   <LinkButtonSecond direction="#contacto" text="Solicitar" />
   <hr class="border-gray-950/25" />

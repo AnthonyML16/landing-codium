@@ -5,14 +5,14 @@ import Link from "./Link.astro";
 import LinkButton from "./LinkButton.astro";
 ---
 
-<header class="w-full bg-white sticky top-0 z-10 transition-all duration-500" id="header">
-  <div class="p-7.5 flex items-center justify-between">
+<header class="w-full bg-white sticky top-0 z-10 transition-all duration-500 2xl:text-xl" id="header">
+  <div class="p-7.5 flex items-center justify-between xl:px-10 2xl:px-18.75">
     <div class="flex">
-      <a href="#home" class="-m-1.5 p-1.5">
+      <a href="#home">
         <Imagotipo />
       </a>
     </div>
-    <div class="flex lg:hidden">
+    <div class="flex xl:hidden">
       <ButtonAction buttonId="button-menu-open">
         <svg
           class="size-6"
@@ -31,8 +31,8 @@ import LinkButton from "./LinkButton.astro";
       </ButtonAction>
     </div>
 
-    <nav class="max-lg:hidden">
-      <ul class="flex gap-10">
+    <nav class="max-xl:hidden">
+      <ul class="flex gap-10 2xl:gap-12.5">
         <li><Link direction="#caracteristicas" text="Características" /></li>
         <li><Link direction="#soluciones" text="Soluciones" /></li>
         <li><Link direction="#beneficios" text="Beneficios" /></li>
@@ -41,14 +41,14 @@ import LinkButton from "./LinkButton.astro";
       </ul>
     </nav>
 
-    <ul class="max-lg:hidden flex gap-10">
+    <ul class="max-xl:hidden flex gap-10 2xl:gap-12.5">
       <li><Link direction="#contacto" text="Solicitar demo" /></li>
       <li><LinkButton /></li>
     </ul>
   </div>
 
   <div
-    class="absolute top-0 -left-full transition-position transition-discrete duration-1000 ease-in-out z-20 w-full h-screen overflow-y-auto bg-white p-7.5 md:w-md md:shadow-2xl lg:hidden"
+    class="absolute top-0 -left-full transition-position transition-discrete duration-1000 ease-in-out z-20 w-full h-screen overflow-y-auto bg-white p-7.5 md:w-md md:shadow-2xl xl:hidden"
     role="dialog"
     aria-modal="true"
     id="menu"

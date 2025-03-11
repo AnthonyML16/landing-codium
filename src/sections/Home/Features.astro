@@ -12,14 +12,14 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
 ---
 
 <section
-  class="w-full px-5 mt-15 flex flex-col items-center text-center overflow-clip"
+  class="p-5 mt-15 flex flex-col items-center text-center overflow-clip max-w-405 2xl:mx-auto"
   id="caracteristicas"
 >
   <NameSection name="Caracteristicas" />
   <TitleSection title="Muchas funciones en un solo lugar" />
   <TextSubtitle />
 
-  <div class="mt-7.5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+  <div class="mt-7.5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
     <Card
       title="Gestión de usuarios"
       description="Perfiles dedicados para personal, docentes y estudiantes, y permisos para el personal."
@@ -115,7 +115,7 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
       </div>
     </Card>
 
-    <div class="h-full lg:col-span-2">
+    <div class="h-full xl:col-span-2">
       <Card
         title="Administración de cursos"
         description="Capacidad de tener una gran cantidad de cursos que se pueden segmentar por categorías y niveles para un mayor orden."
@@ -141,7 +141,7 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
       </Card>
     </div>
 
-    <div class="h-full lg:col-span-2">
+    <div class="h-full xl:col-span-2">
       <Card
         title="Materiales para el aprendizaje"
         description="Se pueden publicar distintos tipos de materiales para que los estudiantes tengan el acceso más completo al curso."
