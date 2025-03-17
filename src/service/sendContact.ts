@@ -70,7 +70,7 @@ export const server = {
                         <tr>
                         <td>
                             <img
-                            src="${logo.src}"
+                            src=${logo.src}
                             style="display:block;outline:none;border:none;text-decoration:none"
                             width="114"
                             alt="Logo Codium Platform" />
