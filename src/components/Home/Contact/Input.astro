@@ -1,5 +1,5 @@
 ---
-const { identifier, label, type, placeholder } = Astro.props;
+const { identifier, label, type, placeholder, error } = Astro.props;
 ---
 
 <div class="space-y-5 reveal-fade-up">
@@ -9,6 +9,8 @@ const { identifier, label, type, placeholder } = Astro.props;
     name={identifier}
     id={identifier}
     placeholder={placeholder}
-    class="w-full px-5 py-4 rounded-xl bg-gray-950/3 border-1 border-gray-950/25 text-black focus:outline-teal-600 focus:text-teal-600 transition-all duration-500 2xl:text-2xl"
+    class="w-full px-5 py-4 m-0 rounded-xl bg-gray-950/3 border-1 border-gray-950/25 text-black focus:outline-teal-600 focus:text-teal-600 transition-all duration-500 2xl:text-2xl" 
+    required
   />
+  {error && <p class="text-red-500 text-xs py-1 px-2.5">{error}</p>}
 </div>

@@ -1,5 +1,5 @@
 ---
-const { identifier, label, placeholder } = Astro.props;
+const { identifier, label, placeholder, error } = Astro.props;
 ---
 
 <div class="size-full flex flex-col gap-5 reveal-fade-up">
@@ -10,6 +10,9 @@ const { identifier, label, placeholder } = Astro.props;
       id={identifier}
       placeholder={placeholder}
       class="size-full px-5 py-4 rounded-xl bg-gray-950/3 border-1 border-gray-950/25 text-black 2xl:text-2xl"
+      required 
+      minlength="10"
     ></textarea>
   </div>
+  {error && <p class="text-red-500 text-xs py-1 px-2.5">{error}</p>}
 </div>
