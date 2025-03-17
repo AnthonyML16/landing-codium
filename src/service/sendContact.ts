@@ -41,8 +41,8 @@ export const server = {
 
       try {
         const { data, error } = await resend.emails.send({
-          from: "Codium Platform <onboarding@resend.dev>",
-          to: ["luis.anthony.laml@gmail.com"],
+          from: "Codium Platform <notifications@codiumplatform.com>",
+          to: [`${email}`, 'contact@codiumplatformcom'],
           subject: "Contacto - Codium Platform",
           html: `
           <body
@@ -126,10 +126,10 @@ export const server = {
                         <tr>
                         <td>
                             <p style="font-size:14px;line-height:1.5;margin:16px 0">
-                            Hola <strong>${name}</strong>
+                            Hola, 
                             </p>
                             <p style="font-size:14px;line-height:1.5;margin:16px 0">
-                            A continuación te enviamos una copia de la información de contacto que ingresaste en el sitio web de Codium.
+                            A continuación se envía la información de contacto ingresada en  la sección de contacto del sitio web de Codium.
                             </p>
                             <table style="width: 100%;">
                                 <tr>
@@ -166,7 +166,7 @@ export const server = {
                                 </tr>
                             </table>
                             <p style="font-size:14px;line-height:1.5;margin:16px 0">
-                                Pronto uno de nuestros asesores se pondrá en contacto contigo para brindarte más información.
+                                Pronto uno de nuestros asesores se pondrá en contacto para brindar más información.
                             </p>
                             <p style="font-size:14px;line-height:1.5;margin:16px 0">
                             Gracias,<br />Equipo de Codium Platform
