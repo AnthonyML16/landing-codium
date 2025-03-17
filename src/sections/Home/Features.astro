@@ -9,6 +9,7 @@ import Card from "../../components/Home/Features/Card.astro";
 import TextSubtitle from "../../components/Home/Features/TextSubtitle.astro";
 import Icon from "../../components/Home/Icon.astro";
 import TextFinal from "../../components/Home/Features/TextFinal.astro";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -122,18 +123,18 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
         reveal="down"
       >
         <div class="w-full h-50 flex items-center justify-between gap-2">
-          <img
-            src={admCursos1.src}
+          <Image
+            src={admCursos1}
             alt="Imagen de información de cursos"
             class="w-3/10 max-h-40 object-contain object-left"
           />
-          <img
-            src={admCursos2.src}
+          <Image
+            src={admCursos2}
             alt="Imagen de información de cursos"
             class="w-4/10 max-h-50 object-contain"
           />
-          <img
-            src={admCursos3.src}
+          <Image
+            src={admCursos3}
             alt="Imagen de información de cursos"
             class="w-3/10 max-h-40 object-contain object-right"
           />
@@ -402,8 +403,8 @@ import TextFinal from "../../components/Home/Features/TextFinal.astro";
     >
       <div class="w-full h-50 flex items-center justify-center">
         <div class="relative w-max">
-          <img
-            src={certificado.src}
+          <Image
+            src={certificado}
             alt="Imagen de información de cursos"
             class="h-35"
           />
