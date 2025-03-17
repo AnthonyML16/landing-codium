@@ -42,7 +42,7 @@ export const server = {
       try {
         const { data, error } = await resend.emails.send({
           from: "Codium Platform <notifications@codiumplatform.com>",
-          to: [`${email}`, 'contact@codiumplatformcom'],
+          to: [`${email}`, 'contact@codiumplatform.com'],
           subject: "Contacto - Codium Platform",
           html: `
           <body
